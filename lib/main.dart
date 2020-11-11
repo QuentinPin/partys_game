@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:partys_game/PurplePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,16 +49,29 @@ class HomePage extends StatelessWidget {
                       // TODO : redirection vers la page du fuck the queen
                     },
                     color: Colors.amber,
-                    child: Text("Fuck the queen"),
+                    child: Text(
+                      "Fuck the queen",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: screenSize.height * 0.02),
+                    ),
                   )),
               SizedBox(
                 width: screenSize.width * 0.65,
                 child: RaisedButton(
                   onPressed: () {
-                    // TODO : redirection vers la page du fuck the queen
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PurplePage()),
+                    );
                   },
                   color: Colors.amber,
-                  child: Text("Purple"),
+                  child: Text(
+                    "Purple",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: screenSize.height * 0.02),
+                  ),
                 ),
               ),
             ],
