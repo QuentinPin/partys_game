@@ -43,20 +43,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                  width: screenSize.width * 0.65,
-                  child: RaisedButton(
-                    onPressed: () {
-                      // TODO : redirection vers la page du fuck the queen
-                    },
-                    color: Colors.amber,
-                    child: Text(
-                      "Fuck the queen",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: screenSize.height * 0.02),
-                    ),
-                  )),
-              SizedBox(
                 width: screenSize.width * 0.65,
                 child: RaisedButton(
                   onPressed: () {
@@ -68,6 +54,24 @@ class HomePage extends StatelessWidget {
                   color: Colors.amber,
                   child: Text(
                     "Purple",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: screenSize.height * 0.02),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: screenSize.width * 0.65,
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PurplePage()),
+                    );
+                  },
+                  color: Colors.amber,
+                  child: Text(
+                    "A venir : j'ai déjà",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: screenSize.height * 0.02),
